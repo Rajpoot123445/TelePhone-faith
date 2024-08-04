@@ -6,14 +6,18 @@ import PremiumFeatures from './components/PremiumFeatures.jsx';
 import Footer from './components/Footer.jsx';
 import { BrowserRouter, Routes } from 'react-router-dom';
 
+import './App.css'
+
 function App() {
 
   return (
    <BrowserRouter>
-      <Header />
-      <Routes>
+      <div>
+        <Header />
+        <Routes>
 
-      </Routes>
+        </Routes>
+      </div>
    </BrowserRouter>
   )
 }

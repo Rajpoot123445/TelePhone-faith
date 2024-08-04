@@ -1,0 +1,118 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  background-color: #33284d;
+  color: white;
+  width: 80%;
+  margin-left: 7%;
+}
+
+.navList {
+  display: flex;
+  list-style-type: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownButton {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  background-color: rgb(237, 237, 238);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+  color: #333;
+  padding: 2rem;
+  top: 38px;
+  left: -20px;
+}
+
+.dropdownMenu::before{
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: rgb(237, 237, 238);
+  clip-path: polygon(48% 54%, 0% 100%, 100% 100%);
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  z-index: 10;
+}
+.dropdownTitle {
+  margin-top: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.dropdownDescription {
+  margin-bottom: 1rem;
+}
+
+.dropdownList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  background-color: #6a5acd;
+  border-radius: 50%;
+  border: 4px solid #ccc7e9;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemTitle {
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+.itemDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.accountButton {
+  background-color: #ffd700;
+  color: #33284d;
+  border: none;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
