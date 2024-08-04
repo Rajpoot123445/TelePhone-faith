@@ -1,0 +1,30 @@
+/* Header.module.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #33284d;
+    color: white;
+  }
+  
+  .header nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+  }
+  
+  .header nav ul li {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .accountButton {
+    background-color: #ffd700;
+    color: #33284d;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
