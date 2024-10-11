@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6rem 1.2rem;
-  background-color: #351285;
+  padding: 0.6rem 2.3rem;
+  background: -webkit-linear-gradient(top, #c6117d 0%, #e50471 100%);
   color: white;
 }
 
@@ -25,6 +25,7 @@
 }
 
 .dropdownButton {
+  display: flex;
   background-color: transparent;
   color: white;
   border: none;
@@ -115,12 +116,20 @@
 }
 
 .accountButton {
-  background-color: #ffd700;
+  display: flex;
+  gap: 0.2rem;
+  background-color: white;
+  border: 1px solid -webkit-linear-gradient(top, #c6117d 0%, #f50b7c 100%);;
   color: #351285;
   border: none;
   font-weight: 700;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.3rem;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 50px;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.accountButton:hover {
+  transform: scale(1.1);
 }

@@ -1,82 +1,132 @@
 .footer {
-    background-color: #474952;
-    color: #fff;
-    padding: 20px 15px;
-    height: auto;
-    .footer__content {
+  background-color: #474952;
+  color: #fff;
+  padding: 20px 15px;
+  height: auto;
+
+  .footer__content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      justify-content: center; // Center sections on smaller screens
+    }
+  }
+
+  .footer__section {
+    margin: 0 20px;
+    flex: 1 1 200px; // Allow sections to grow and shrink, with a minimum width
+
+    h4 {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 21px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+    }
+
+    div {
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 40px;
+
+      input {
+        width: calc(100% - 40px);
+        padding: 0px 10px;
+        border: none;
+      }
+
+      button {
+        width: 40px;
+        padding: 0px 10px;
+        background-color: #4d5661;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    .footer__social {
+      margin: 20px 0;
+
+      i {
+        font-size: 20px;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .footer__bottom {
+    text-align: center;
+    margin-top: 20px;
+
+    .footer__payments {
+      margin-bottom: 10px;
+
+      img {
+        width: 160px;
+        margin-right: 10px;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    .footer__section {
+      margin: 10px 0; // Reduce margin on smaller screens
+      flex: 1 1 100%; // Stack sections vertically
+      text-align: center; // Center text in sections
     }
   
-    .footer__section {
-      margin: 0 20px;
-  
-      h4 {
-        margin-top: 20px;
-        font-weight: 600;
-        font-size: 21px;
-        margin-bottom: 15px;
-      }
-  
-      ul {
-        list-style: none;
-        padding: 0;
-  
-        li {
-          margin-bottom: 10px;
-          font-size: 16px;
+    .footer__social {
+      justify-content: center; // Center social icons on smaller screens
+    }
+
+    .footer__bottom {
+      .footer__payments {
+        img {
+          width: 100px; // Adjust payment image size for smaller screens
+          margin-right: 5px; // Adjust margin
         }
       }
-  
-        div{
-            display: flex;
-            border-radius: 5px;
-            overflow: hidden;
-            height: 40px;
+    }
+  }
 
-            input {
-                width: calc(100% - 40px);
-                padding: 0px 10px;
-                border: none;
-              }
-        
-              button {
-                width: 40px;
-                padding: 0px 10px;
-                background-color: #4d5661;
-                border: none;
-                cursor: pointer;
-              }
-  
-        .footer__social {
-          margin: 20px 0;
-  
-          i {
-            font-size: 20px;
-            margin-right: 15px;
-            cursor: pointer;
+  @media (max-width: 480px) {
+    .footer {
+      padding: 15px 10px; // Reduce padding for very small screens
+
+      .footer__content {
+        flex-direction: column; // Stack all footer content vertically
+        align-items: center; // Center all items
+      }
+
+      .footer__section {
+        margin: 10px 0; // Further reduce margin
+      }
+
+      .footer__bottom {
+        .footer__payments {
+          img {
+            width: 80px; // Further adjust payment image size
           }
         }
       }
     }
-  
-    .footer__bottom {
-      text-align: center;
-      margin-top: 20px;
-  
-      .footer__payments {
-        margin-bottom: 10px;
-  
-        img {
-          width: 160px;
-          margin-right: 10px;
-        }
-      }
-  
-      p {
-        margin: 0;
-      }
-    }
   }
-  
+}

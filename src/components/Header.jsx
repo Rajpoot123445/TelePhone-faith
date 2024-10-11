@@ -9,6 +9,7 @@ import { BsAirplane } from "react-icons/bs";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { GiVibratingSmartphone } from "react-icons/gi";
 import { ImTree } from "react-icons/im";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [dropdownsOpen, setDropdownsOpen] = useState(0);
@@ -97,7 +98,7 @@ function Header() {
                 className="dropdownMenu featuresDropDown"
               >
                 <div>
-                <h3 className="dropdownTitle">FREE Features</h3>
+                  <h3 className="dropdownTitle">FREE Features</h3>
                   <p className="dropdownDescription">
                     With every Tamar number, you'll get the below features
                     completely free
@@ -180,12 +181,13 @@ function Header() {
               Solutions <IoMdArrowDropdown />
             </button>
             {dropdownsOpen === 3 && (
-              <div className="dropdownMenu" style={{ minWidth: "450px" }}>
-                <h3 className="dropdownTitle">Phone </h3>
-                <p className="dropdownDescription">
-                  Connect With Your Customers, Pick Your Perfect Number
-                </p>
-               
+              <div className="dropdownMenu" style={{ minWidth: "300px" }}>
+                <ul>
+                  <li className="hover:bg-gray-300 px-2 py-1 rounded-md"> <Link to="/voip" className="text-lg font-sans font-bold"> VoIP Solutions </Link></li>
+                  <li className="hover:bg-gray-300 px-2 py-1 rounded-md"> <Link to="/whatsapp-bussiness" className="text-lg font-sans font-bold"> WhatsApp Bussiness </Link></li>
+                  <li className="hover:bg-gray-300 px-2 py-1 rounded-md"> <Link to="/outbound-call" className="text-lg font-sans font-bold"> Outbound Calling </Link></li>
+                  <li className="hover:bg-gray-300 px-2 py-1 rounded-md"> <Link to="/isdn" className="text-lg font-sans font-bold"> ISDN Switch Off </Link></li>
+                </ul>
               </div>
             )}
           </li>
@@ -202,7 +204,7 @@ function Header() {
                 <p className="dropdownDescription">
                   Connect With Your Customers, Pick Your Perfect Number
                 </p>
-               
+
               </div>
             )}
           </li>
@@ -219,7 +221,7 @@ function Header() {
                 <p className="dropdownDescription">
                   Connect With Your Customers, Pick Your Perfect Number
                 </p>
-               
+
               </div>
             )}
           </li>
@@ -236,17 +238,17 @@ function Header() {
                 <p className="dropdownDescription">
                   Connect With Your Customers, Pick Your Perfect Number
                 </p>
-               
+
               </div>
             )}
           </li>
-          <li className="navItem mt10">Contact</li>
+          <li className="navItem mt10"> <Link to="/contact-us"> Contact </Link></li>
         </ul>
       </nav>
-      <button className="accountButton">
+      <Link to="/control-panel" className="accountButton">
         My Account
         <IoMdArrowDropdown style={{ transform: "translateY(4px)" }} />
-      </button>
+      </Link>
     </header>
   );
 }
